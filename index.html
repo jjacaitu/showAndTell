@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles.css">
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <script src="https://kit.fontawesome.com/d6f0115eb5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Alatsi&display=swap" rel="stylesheet">
+    <title>Ml5.js</title>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+
+            <section class="introduction">
+                <img src="./ml5_logo.png" alt="">
+                <p>A neighborly approach to creating and exploring artificial intelligence in the browser.</p>
+                <img src="./meme.png" alt="">
+            </section>
+            <section class="theWhy">
+                <h2>Why would you use it??</h2>
+                <h3>Pros</h3>
+                <ol>
+                    <li>Approachable and easy to use</li>
+                    <li>Lets you train, import and export models.</li>
+                    <li>Lets you play with machine learning without needing to understand anything about the mathematics behind it!</li>
+                </ol> 
+                <h3>Cons</h3>
+                <ol>
+                    <li>Its still under development and has some bugs</li>
+                    <li>Right now its good to play with machine learning for the first time but its limited.</li>
+                    <li>Not too many tutorials</li>
+                </ol>
+            </section>
+            <section>
+                <h2>How to use it?</h2>
+                <p>You can download the files or you can use the cdn link of the library:</p>
+                <img src="./cdn .png" alt="">
+            </section>
+            <section class="models">
+                <h2>Some of the machine learning models you can use are:</h2>
+                <img src="./models.png" alt="">
+                <a href="https://quickdraw.withgoogle.com/#" target="_blank">Google quickdraw</a>
+            </section>
+            <section class="howEasy">
+                <h2>How easy it is? It depends on the model but for example...</h2>
+                <p>With just this little amount of code you can create an image classiffier using a pre-trained model that has already been trained with more than 15 million pictures!</p>
+                <img src="./imageClassifierCode.png" alt="">
+            </section>
+            <section class="imageClassifier">
+                <h2>Image Classiffier</h2>
+                <p>An image classifier use neural networks and machine learning to recognize the content of images based on the images it was trained with.</p>
+                <img  id="myImage" src="" alt="" >
+                <label for="imageUpload">Select an image: </label>
+                <input type="file" name="" id="imageUpload"/>
+                <p class="prediction"></p>
+            </section>
+            <section class="posenet">
+                <h2>Posenet and SoundClassifier</h2>
+                <p>SoundClassiffier allows you to classify audio.Using the
+                    "SpeechCommands18w" model lets you recognize words like the ten digits from "zero" to "nine", "up", "down", "left",
+                    "right", "go","stop", "yes", "no".</p>
+                <p>Posenet is a model that uses naural networks to identify the pose of a user by being trained specifiying where certain points of the body are like nose, eyes, elbows, knees, etc.</p>
+                
+                <img src="./1 eftsiVXhqoVrKJHYaxLYkw.gif" alt="">
+                
+            </section>
+            
+            <section class="posenet">
+                <h2>Example using Posenet with SoundClassifier models</h2>
+                <button class="startWebcam">Start</button>
+                <button class="endButton">End presentation</button>
+                <h3 class="thankYou">THANK YOU</h3>
+                <div class="pointer"><i class="fas fa-mouse-pointer"></i></div>
+            </section>
+        </div>
+    </main>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+<script src="./script.js"></script>
+</html>
