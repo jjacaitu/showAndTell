@@ -76,6 +76,13 @@ function gotPoses(poses) {
     // console.log(poses[0].pose.keypoints[0].position);
 }
 
+$(".endButton").on("click", () => {
+    $(`.thankYou`).fadeIn();
+    for (let i = 0; i < 250; i++) {
+        create(i);
+    }
+})
+
 function gotSounds(error, results){
     if (results[0].label === "yes") {
         // console.log("click!!!")

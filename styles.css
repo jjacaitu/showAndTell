@@ -96,6 +96,11 @@ section {
     height: 100px;
 }
 
+.posenet p {
+  padding: 15px 0;
+  margin: 0;
+}
+
 .thankYou {
     font-size: 6rem;
     position: absolute;
