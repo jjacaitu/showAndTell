@@ -66,10 +66,13 @@ function startWebcam() {
 
 
 function gotPoses(poses) {
-    x = poses[0].pose.keypoints[0].position.x;
-    y = poses[0].pose.keypoints[0].position.y;
-    $(".pointer").css("right", `${(x/600) * 100}vw`);
-    $(".pointer").css("top", `${(y / 400) * 100}vh`);
+    if (poses.length) {
+        x = poses[0].pose.keypoints[0].position.x;
+        y = poses[0].pose.keypoints[0].position.y;
+        $(".pointer").css("right", `${(x/600) * 100}vw`);
+        $(".pointer").css("top", `${(y / 400) * 100}vh`);
+        
+    }
     // console.log(poses[0].pose.keypoints[0].position);
 }
 
