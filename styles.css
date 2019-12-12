@@ -27,6 +27,12 @@ ol, li {
     width: 100%;
 }
 
+ul li{
+  list-style: none;
+  padding-left: 50px;
+  color: #ff0;
+}
+
 
 
 .wrapper{
@@ -39,24 +45,33 @@ ol, li {
     width: 30%;
 }
 
-.howEasy img {
-    width: 50%;
+
+.modelsList {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  text-align: center;
+}
+.introduction p{
+    text-align: center;
 }
 
 .introduction {
-    
+  border: none;
 }
 
 .introduction img {
-    width: 200px;
+    width: 300px;
+    padding: 20px;
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-top: 5px solid #A256FF;
 }
 
 .pointer {
@@ -90,6 +105,10 @@ section {
     animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     z-index: 3;
     padding: 10px;
+}
+
+.howEasy img {
+  width: 40%;
 }
 
 body {
