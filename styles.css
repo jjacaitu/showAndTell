@@ -29,7 +29,7 @@ ol, li {
 
 ul li{
   list-style: none;
-  padding-left: 50px;
+  padding-left: 80px;
   color: #ff0;
 }
 
@@ -101,6 +101,12 @@ section {
   margin: 0;
 }
 
+.imagesDiv {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .thankYou {
     font-size: 6rem;
     position: absolute;
@@ -113,7 +119,7 @@ section {
 }
 
 .howEasy img {
-  width: 40%;
+  width: 48%;
 }
 
 body {

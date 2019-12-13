@@ -1,19 +1,18 @@
 let video;
 let x= 0;
 let y = 0;
+
+
+
 let mobilenet;
 let classifier;
-
-function setup() {
-
    
-    $("input[type=file]").attr("disabled","true");
-    
-    classifier = ml5.imageClassifier('MobileNet', () => {
-                
-        $("input[type=file]").removeAttr("disabled");
-    });
-}
+$("input[type=file]").attr("disabled","true");
+
+classifier = ml5.imageClassifier('MobileNet', () => {
+            
+    $("input[type=file]").removeAttr("disabled");
+});
 
 $("input[type=file]").on("change", (e) => {
      
@@ -31,8 +30,6 @@ $("input[type=file]").on("change", (e) => {
             $(".prediction").text(result[0].label);
         });
     }, 100);
-
-    
 })
   
 
