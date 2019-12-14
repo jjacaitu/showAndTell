@@ -6,38 +6,42 @@ let y = 0;
 
 let mobilenet;
 let classifier;
-   
-$("input[type=file]").attr("disabled","true");
-
-classifier = ml5.imageClassifier('MobileNet', () => {
-            
-    $("input[type=file]").removeAttr("disabled");
-});
-
-$("input[type=file]").on("change", (e) => {
-     
-    const file = e.target.files[0];
-
-    const tmppath = URL.createObjectURL(file);
-
-    const img = $("#myImage")[0];
+function setup() {
     
-    img.src = tmppath;
+    $("input[type=file]").attr("disabled","true");
+    
+    classifier = ml5.imageClassifier('MobileNet', () => {
+                
+        $("input[type=file]").removeAttr("disabled");
+    });
+    
+    $("input[type=file]").on("change", (e) => {
+         
+        const file = e.target.files[0];
+    
+        const tmppath = URL.createObjectURL(file);
+    
+        const img = $("#myImage")[0];
+        
+        img.src = tmppath;
+    
+        setTimeout(() => {
+            classifier.predict(img, (err, result) => {
+                console.log(result)
+                $(".prediction").text(result[0].label);
+            });
+        }, 100);
+    })
+      
+    
+    $(".thankYou").hide();
+    $(".pointer").hide();
+    $(".endButton").hide();
+    
+    $(".startWebcam").on("click", startWebcam);
+}
 
-    setTimeout(() => {
-        classifier.predict(img, (err, result) => {
-            console.log(result)
-            $(".prediction").text(result[0].label);
-        });
-    }, 100);
-})
-  
-
-$(".thankYou").hide();
-$(".pointer").hide();
-$(".endButton").hide();
-
-$(".startWebcam").on("click", startWebcam);
+   
 
 
 function startWebcam() {
